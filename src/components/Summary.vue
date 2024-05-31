@@ -56,13 +56,13 @@ const surplusRemaining = computed(() => {
             🔋 Charged = <strong>{{ chargedBattery }}</strong><br>
             ⚡ Consumption ({{ appliancesKwh }} kWh + {{ inverterEfficiency * 100 }}% Efficiency) = <strong>{{ consumption }} kWh</strong>
         </div>
-        <div v-if="capacity < 0" class="rounded-lg bg-red-100 p-3 mb-3">
+        <div v-if="capacity < 0" class="rounded-lg bg-red-100 p-3">
             🪫 Capacity Required = <strong>{{ capacity * -1 }} kWh</strong>
         </div>
-        <div v-if="capacity >= 0" class="rounded-lg bg-green-100 p-3 mb-3">
+        <div v-if="capacity >= 0" class="rounded-lg bg-green-100 p-3">
             🔋 Capacity Left = <strong>{{ capacity }} kWh</strong>
         </div>
-        <div v-if="chargingSurplus > 0" class="rounded-lg bg-yellow-100 p-3">
+        <div v-if="chargingSurplus > 0" class="rounded-lg bg-yellow-100 p-3 mt-3">
             🌞 Surplus = <strong>{{ chargingSurplus }} kWh</strong>
             <div v-if="capacity < 0">
                 <hr class="my-2 border-black">
